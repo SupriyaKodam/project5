@@ -7,9 +7,11 @@ import EmailIcon from '@mui/icons-material/Email';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const[sidebarOpen,setSidebarOpen]=useState(false);
+    const navigate = useNavigate();
     const toggleSidebar =() =>{
         setSidebarOpen(!sidebarOpen);
     };
@@ -23,9 +25,9 @@ const Navbar = () => {
              <p className='text-white'><WatchLaterIcon className='text-orange-600'/>Mon-Sun:5.00 AM-11.00 PM</p>
           </div>
           <div className='flex flex-row gap-8'>
-              <FacebookIcon className='text-white'/>
-              <InstagramIcon className='text-white'/>
-              <SubscriptionsOutlinedIcon className='text-white'/>
+              <FacebookIcon className='text-orange-600'/>
+              <InstagramIcon className='text-orange-600'/>
+              <SubscriptionsOutlinedIcon className='text-orange-600'/>
           </div>
       </div>
       <div className='hidden lg:flex flex-row items-center justify-around h-20 w-full bg-black'>
@@ -33,11 +35,11 @@ const Navbar = () => {
             <img className='' src="./Images/RK.PNG"/>
         </div>
         <div className='flex flex-row gap-5 font-semibold'>
-            <button className='text-white'>HOME</button>
-            <button className='text-white'>DWARKA</button>
-            <button className='text-white'>PASCHIM VIHAR</button>
-            <button className='text-white'>ABOUT US</button>
-            <button className='text-white'>CONTACT</button>
+            <button className='text-white' onClick={()=>navigate('/landingpage')}>HOME</button>
+            <button className='text-white' onClick={()=>navigate('/dwarka')}>DWARKA</button>
+            <button className='text-white'onClick={()=>navigate('/paschimvihar')}>PASCHIM VIHAR</button>
+            <button className='text-white'onClick={()=>navigate('/about-us')}>ABOUT US</button>
+            <button className='text-white'onClick={()=>navigate('/contact')}>CONTACT</button>
             <button className='text-white p-3 bg-orange-600 rounded-lg'>CALL NOW</button>
         </div>
       </div>
@@ -66,11 +68,11 @@ const Navbar = () => {
         </div>
         {/*sidebar menu*/}
         <div className="flex flex-col gap-5 mt-10 ml-4 font-semibold">
-          <button className="text-white">HOME</button>
-          <button className="text-white">DWARKA</button>
-          <button className="text-white">PASCHIM VIHAR</button>
-          <button className="text-white">ABOUT US</button>
-          <button className="text-white">CONTACT</button>
+          <button className="text-white" onClick={()=>{navigate('/landingpage');toggleSidebar();}}>HOME</button>
+          <button className="text-white" onClick={()=>{navigate('/dwarka');toggleSidebar();}}>DWARKA</button>
+          <button className="text-white" onClick={()=>{navigate('/paschimvihar');toggleSidebar();}}>PASCHIM VIHAR</button>
+          <button className="text-white" onClick={()=>{navigate('/about-us');toggleSidebar();}}>ABOUT US</button>
+          <button className="text-white" onClick={()=>{navigate('/contact');toggleSidebar();}}>CONTACT</button>
           <button className="text-white p-3 bg-orange-600 rounded-lg">CALL NOW</button>
         </div>
       </div>

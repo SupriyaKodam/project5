@@ -5,3 +5,9 @@
 body {
     @apply bg-black;
   }
+  .slick-slide {
+    display: inline-block;
+  }
+.slick-slide>div{
+  margin: 0 10px;
+}  

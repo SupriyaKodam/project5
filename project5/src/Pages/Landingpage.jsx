@@ -5,6 +5,8 @@ import Aboutus from '../Components/Aboutus'
 import Ourclass from '../Components/Ourclass'
 import Ourclass2 from '../Components/Ourclass2'
 import Test from '../Components/Test'
+import Fitness from '../Components/Fitness'
+
 
 const Landingpage = () => {
   return (
@@ -15,6 +17,7 @@ const Landingpage = () => {
        <Ourclass/>
        <Ourclass2/>
        <Test/>
+       <Fitness/>
     </div>
   )
 }

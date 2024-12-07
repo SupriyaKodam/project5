@@ -1,9 +1,14 @@
 import React from 'react'
 import ReactPlayer from 'react-player/youtube'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { useEffect } from 'react';
 
 const Aboutus = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0);
+},[]);
   return (
+    <div>
     <div className='flex flex-col lg:flex-row items-center justify-around bg-black mt-20'>
     <div className='flex flex-col md:ml-3 items-start justify-start w-screen lg:w-1/2 gap-y-3'>
         <h1 className='text-orange-600 text-4xl font-bold'>About Us
@@ -22,6 +27,7 @@ const Aboutus = () => {
       <div className=''>
       <img className='w-full max-w-full lg:w-[650px] lg:max-w-[650px]' src="./Images/d.JPEG"/>
       </div>
+    </div>
     </div>
     </div>
   )

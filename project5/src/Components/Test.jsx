@@ -1,4 +1,5 @@
 import React from 'react'
+import GymReviews from './GymReviews'
 
 const Test = () => {
   return (
@@ -14,6 +15,7 @@ const Test = () => {
                 <img className="w-[600px]" src="./Images/U.JPEG"/>
             </div>
         </div>
+        <GymReviews/>
         </div>
       </div>
   )
